@@ -63,7 +63,7 @@
         justify-content: space-between;
       }
 
-      #button {
+      .button {
         display: block;
         position: relative;
         width: 234px;
@@ -71,9 +71,6 @@
         cursor: pointer;
       }
 
-      #button img {
-        width: 186px;
-      }
 
       #logo {
         height: 311px;
@@ -83,8 +80,7 @@
         width: 261px;
       }
 
-      #button .content {
-        background: #6A82FB;
+      .button .content {
         padding: 14px 24px;
         border-radius: 16px;
         z-index: 1;
@@ -96,17 +92,35 @@
         transition: top .05s ease-out;
       }
 
-      #button:active .content {
+      .button:active .content {
         top: 10%;
       }
 
-      #button .under {
+      .button .under {
         position: absolute;
-        background: #5061BC;
         width: 100%;
         height: 100%;
         border-radius: 16px;
         top: 10%;
+      }
+      .button.discord img {
+        width: 186px;
+      }
+      .button.discord .content {
+        background: #6A82FB;
+      }
+      .button.discord .under {
+        background: #5061BC;
+      }
+      .button.play img {
+        width: 136px;
+      }
+      .button.play .content {
+        background: #E46767;
+        text-align: center;
+      }
+      .button.play .under {
+        background: #AB4D4D;
       }
 
     </style>
@@ -118,8 +132,13 @@
       <div>
         <img id="logo" src="./logo.png" alt="Siege Out!" />
         <br />
-        <img id="text2" src="./text2.png" alt="Closed beta available soon:" />
-        <a id="button" href="https://discord.gg/CEmfxV2aFm">
+        <a class="button play" href="./SiegeOut.apk" download="SiegeOut.apk">
+          <div class="under"></div>
+          <div class="content">
+            <img id="play" src="./play.png" alt="Play" />
+          </div>
+        </a>
+        <a class="button discord" href="https://discord.gg/CEmfxV2aFm">
           <div class="under"></div>
           <div class="content">
             <img id="discord" src="./discord.png" alt="Discord" />
